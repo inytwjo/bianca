@@ -1,0 +1,405 @@
+body {
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #008165;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav #home {
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #004133; 
+}
+
+
+nav a.active,
+nav a.active:hover {
+    background-color: #004133;
+    color: #fff;
+}
+nav ul li {
+    position: relative; 
+}
+
+nav ul li.active::after {
+    content: ""; 
+    position: absolute;
+    width: 6px; 
+    height: 22px; 
+    background-color: #004133; 
+    top: 50%; 
+    transform: translateY(-50%);
+    left: -10px;
+    border-radius: 5px; 
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content{
+    position: relative;
+}
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.background-rectangle {
+    background-color: #004133;
+    width: 20%;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.footer-rectangle {
+    background-color: #004133;
+    width: 100%;
+    height:8vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.text-content {
+    flex: 1;
+    color: #d3d3d3;
+    max-width: 100%;
+    margin: 20px;
+    margin-top: 20px;
+    position: relative;
+
+}
+.imagine-text {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+    color: #008165;
+    font-size: 5vw; 
+    font-weight: bold;
+}
+
+.text-content h3 {
+    color: #008165;
+    font-size: 27px;
+    margin-top: -50px;
+    margin-bottom: 50px; 
+}
+
+.text-content h2 {
+    color: #008165;
+    font-size: 70px; 
+}
+
+.about-image {
+    flex: 0 0 40%;
+    margin-left: 10px;
+}
+
+.experience-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.experience-section h2 {
+    color: #008165;
+    font-size: 45px;
+}
+
+.experience-section p {
+    color: #d3d3d3;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo-gallery {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#galleryPhoto {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #004133;
+    color: #008165;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px; 
+}
+
+button:hover {
+    background-color: #008165;
+}
+
+.photo-gallery img {
+    max-width: 100%;
+    height: auto;
+    width: 40%; 
+    max-height: 500px; 
+    object-fit: cover;
+    margin: 0 10px;
+}
+.photo-credits {
+    color: #d3d3d3;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.experience-section1 {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.experience-section1 p {
+    color: #d3d3d3;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photogallery {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#gallery_Photo {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #181818;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px; 
+}
+
+button:hover {
+    background-color: #008165;
+}
+
+.photogallery img {
+    max-width: 100%;
+    height: auto;
+    width: 40%; 
+    max-height: 500px; 
+    object-fit: cover;
+    margin: 0 10px;
+}
+.photo-credits1 {
+    color: #d3d3d3;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.big-picture-section {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.big-picture-section img {
+    max-width: 99%;
+    height: auto;
+}
+
+.sm1 {
+    text-align: center;
+    margin-top: 20px; 
+    padding: 50px;
+}
+
+.sm1 h2 {
+    color: #008165;
+    font-size: 36px;
+}
+
+.sm {
+    color: #d3d3d3;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+.credit-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #004133;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.credit-link:hover {
+    background-color: #008165;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+ 
+    .footer-rectangle{
+        display: block;
+    }
+    .text-content {
+        max-width: 100%;
+        margin: 20px;
+        position: relative;
+    }
+
+    .text-content h3 {
+        font-size: 20px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
+    }
+
+    .imagine-text {
+        position: static;
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0;
+        font-size: 4vw;
+    }
+
+    .about-image {
+        max-width: 100%; 
+        height: auto;
+        margin-top: 20px; 
+    }
+    .experience-section {
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .experience-section h2 {
+        font-size: 28px;
+    }
+
+    .experience-section p {
+        font-size: 16px;
+    }
+
+    .photo-gallery {
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    #galleryPhoto {
+        margin: 10px 0;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .photo-credits {
+        font-size: 12px;
+    }
+    .photogallery {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .big-picture-section,
+    .sm1 {
+        margin-top: 10px;
+    }
+
+    .big-picture-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sm1 h2 {
+        font-size: 24px;
+    }
+
+    .sm {
+        font-size: 16px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .credit-link {
+        font-size: 12px; 
+    }
+    .about-container{
+        max-width: 100%;
+        height: auto;
+    }
+}

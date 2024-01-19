@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new_about.css">
+    <title>About - Bianca Fesariton</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="home"><a href="new_homepage.html">Bianca Fesariton</a></li>
+                <li id="about" class="active"><a href="new_about.html">About</a></li>
+                <li><a href="new_portfolio.html">Portfolio</a></li>
+                <li><a href="new_contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-content">
+        <div class="content-container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="aboutme.png" alt="Bianca's Image">
+                </div>
+                <div class="text-content">
+                    <h2>Hello!</h2>
+                    <h3>I'm Bianca Fesariton</h3>
+                        <p>Taking Bachelor of Science in Information Technology specialize in Mobile and Internet Technology in 
+                        </br>National University - Fairview, and I’m currently the Executive Secretary of Google Developer Student Club.</p>
+
+                        <p>A passionate Video Editor. I started editing videos at the age of 15 and decided to create a Youtube channel 
+                        </br>for my videos. I made a community in my channel with my loving supporters that keeps on supporting me.</p>
+                
+                        <p>I took Humanities and Social Sciences in my Senior Year in High School, that’s where I gain my skills and 
+                        </br>knowledge in writing and it became my interest. I do journaling, and write poems.</p>
+                
+                        <p>I started working in a Computer Shop way back 2017 up until now. I was curious and interested in learning 
+                        </br>Technology, that’s why it became the reason I’m taking BSIT in college. I currently write quotations, do online 
+                    </br>transaction in government sites, and assisting computer renters. </p>
+                </div>
+        </div>
+            <div class="imagine-text">Imagine</div>
+            <div class="background-rectangle"></div>
+            <div class="footer-rectangle"></div>
+    </div>
+        <div class="experience-section">
+            <h2>Experience</h2>
+                <p>I became a part of selected students who participated in three days School Invasion of the Ateneo Association of Communication Majors (ACOMM) in 2018.</p>
+        </div>
+    <div class="photo-gallery">
+        <button id="prevBtn" onclick="showPhoto(-1)">&#60;</button>
+            <img id="galleryPhoto" src="src/acomm4.jpg" alt="Experience Photo">
+            <button id="nextBtn" onclick="showPhoto(1)">&#62;</button>
+                <p class="photo-credits">Photo Credits: ACOMM</br> Nikki Bonuel, Miguel Lim, Ronni Antonio, Ayie Tinsay</br>
+                    <a class="credit-link" href="https://www.facebook.com/ACOMMofficial/videos/1654384557974469" target="_blank">Visit ACOMM for more related Content</a>
+                </p>
+    </div>
+    <div class="experience-section1">
+        <p>I am trained of Robotics in Diliman Preparatory School by Data Science and Technology Corporation in 2018.</p>
+    </div>
+    <div class="photogallery">
+        <button id="prevBtn" onclick="showPhoto1(-1)">&#60;</button>
+            <img id="gallery_Photo" src="src/rb1.jpg" alt="Experience Photo">
+        <button id="nextBtn" onclick="showPhoto1(1)">&#62;</button>
+            <p class="photo-credits1">Photo Credits: Diliman Preparatory School</br>
+                <a class="credit-link" href="https://www.facebook.com/DataScienceTechnologyCorporation/photos_albums" target="_blank">Visit Robotics Training by Data Science and Technology Corp.</a>
+            </p>
+    </div>
+    <div class="big-picture-section">
+        <img src="src/sm.jpg" alt="Big Picture">
+    </div>
+    <div class="sm1">
+        <h2>I am an SM Scholar</h2>
+            <p class="sm">I passed the Examination and Interview of SM</br> Foundation Inc., and got the Scholarship in 2022. </br>
+                <a class="credit-link" href="https://www.facebook.com/SMFoundationInc" target="_blank">Visit SM Foundation Inc.</a>
+            </p>
+    </div>
+
+
+    <script>
+    let currentPhotoIndex = 0;
+    const photos = ["src/acomm4.jpg", "src/acomm1.jpg", "src/acomm3.jpg", "src/acomm2.jpg"];
+
+    function showPhoto(step) {
+        currentPhotoIndex += step;
+
+        if (currentPhotoIndex < 0) {
+            currentPhotoIndex = photos.length - 1;
+        } else if (currentPhotoIndex >= photos.length) {
+            currentPhotoIndex = 0;
+        }
+
+        const galleryPhoto = document.getElementById('galleryPhoto');
+        galleryPhoto.src = photos[currentPhotoIndex];
+    }
+
+    let current_PhotoIndex = 0;
+    const photos1 = ["src/rb1.jpg", "src/rb2.jpg", "src/rb3.jpg"];
+
+    function showPhoto1(step) {
+        current_PhotoIndex += step;
+
+        if (current_PhotoIndex < 0) {
+            current_PhotoIndex = photos1.length - 1;
+        } else if (current_PhotoIndex >= photos1.length) {
+            current_PhotoIndex = 0;
+        }
+
+        const gallery_Photo = document.getElementById('gallery_Photo');
+        gallery_Photo.src = photos1[current_PhotoIndex];
+    }
+
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var documentHeight = document.body.offsetHeight;
+
+        if (scrollPosition + windowHeight >= documentHeight) {
+            document.querySelector('.footer-rectangle').style.display = 'block';
+        } else {
+            document.querySelector('.footer-rectangle').style.display = 'none';
+        }
+    });
+
+    </script>
+</body>
+
+</html>

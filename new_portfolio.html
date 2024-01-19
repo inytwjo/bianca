@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new_portfolio.css">
+    <title>Portfolio - Bianca Fesariton</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="home"><a href="new_homepage.html">Bianca Fesariton</a></li>
+                <li><a href="new_about.html">About</a></li>
+                <li id="portfolio" class="active"><a href="new_portfolio.html">Portfolio</a></li>
+                <li><a href="new_contact.html">Contact</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <div class="imagine-text">Imagine</div>
+    <div class="header-text-container">
+        <h1>Video Editing</h1>
+        <p>Click here to visit my Youtube Channel</p>
+        <a class="credit-link" href="https://www.youtube.com/@inytwjo." target="_blank">BXY Entertainment</a>
+    </div>
+
+    <div class="about-content">
+        <div class="content-container">
+            <div class="current-video-container">
+                <div class="video-container">
+                    <video controls id="currentVideo">
+                        <source src="src/roblox.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <div class="small-videos-container">
+                <div class="small-video" onclick="changeCurrentVideo('src/roblox.mp4')">
+                    <div class="video-container">
+                        <img src="src/antifragile.png" alt="Video 1">
+                        <p>Roblox Music Video</p>
+                    </div>
+                </div>
+                <div class="small-video" onclick="changeCurrentVideo('src/gdsc1.mp4')">
+                    <div class="video-container">
+                        <img src="src/gdsc1.PNG" alt="Video 2">
+                        <p>Google Developer Student Clubs Membership</p>
+                    </div>
+                </div>
+                <div class="small-video" onclick="changeCurrentVideo('src/gdsc2.mp4')">
+                    <div class="video-container">
+                        <img src="src/gdsc2.PNG" alt="Video 3">
+                        <p>Google Developer Student Clubs Introduction</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="header-text-container">
+        <h1>AI Voice</h1>
+        <p><b>I am part of the tester team in our AI voice community where we train voices and create models.</b></p></p>
+            Copyright Disclaimer: In accordance with Section 107 of the Copyright Act of 1976, "fair use"</br> 
+            is permitted for activities such as critique, commentary, news coverage, education, scholarship, and research.</br> 
+            Fair use is a legally allowed application of copyrighted material that might otherwise constitute infringement.</br> 
+            The balance is tipped in favor of fair use for non-profit, educational, or personal purposes</p>
+
+            AI Statement: It should be noted that any AI-generated content using these voices is solely for entertainment purposes</br> 
+            and not intended to deceive or mislead listeners. While the technology behind these AI voices is impressive, it is important to</br> 
+            recognize that the credit for the original vocals belongs solely to them. Therefore, any use of their AI voice should be accompanied</br> 
+            by proper attribution to ensure that the original artist is acknowledged. Ultimately, AI-generated content like this serves as a testament</br> 
+            to the power and potential of machine learning in the entertainment industry.</p>
+        <a class="credit-link" href="https://www.youtube.com/@inytwjo." target="_blank">BXY Entertainment</a>
+    </div>
+
+    <div class="about-content">
+        <div class="content-container">
+            <div class="current-video-container">
+                <div class="video-container">
+                    <video controls id="current_Video">
+                        <source src="src/twice.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <div class="small-videos-container">
+                <div class="small-video" onclick="changeCurrentVideoAI('src/twice.mp4')">
+                    <div class="video-container">
+                        <img src="src/twice.png" alt="Video 1">
+                        <p>Perfect Night - Lesserafim</br> TWICE AI Voice</p>
+                    </div>
+                </div>
+                <div class="small-video" onclick="changeCurrentVideoAI('src/ariana.mp4')">
+                    <div class="video-container">
+                        <img src="src/ariana.png" alt="Video 2">
+                        <p>once in a moon - Sarah Kang</br>Ariana Grande AI Voice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background-rectangle"></div>
+            <div class="footer-rectangle"></div>
+    </div>
+    <div class="header-text-container">
+        <h1>1 minute Film</h1>
+        <p>I made this 1 minute film as a requirement for my course.</br>
+            This short film entitled "The Last File" basically shows how dementia works,</br>
+            by having a certain episodes of the loss daughter of the Father.</br>
+            The broken printer symbolizes that moment as the 'last file' before the Father died</br>
+            The black screen in between of the videos is the actual dementia in the mind of an individual. 
+            </p><b>This short film was inspired in the psychological drama film entitled "The Father"</b></p>
+    </div>
+
+    <div class="about-content">
+        <div class="content-container">
+            <div class="current-video-container">
+                <div class="video-container">
+                    <video controls id="currentVideo1">
+                        <source src="src/film.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <script>
+                const videos = ["src/roblox.mp4", "src/gdsc1.mp4", "src/gdsc2.mp4"];
+                function changeCurrentVideo(videoSource) {
+                    const currentVideo = document.getElementById('currentVideo');
+                    currentVideo.src = videoSource;
+                    currentVideo.load();
+                }
+            
+
+                const videos1 = ["src/twice.mp4", "src/ariana.mp4"];
+                function changeCurrentVideoAI(videoSource) {
+                    const currentVideo = document.getElementById('current_Video');
+                    currentVideo.src = videoSource;
+                    currentVideo.load();
+                }
+            
+                window.addEventListener('scroll', function() {
+                    var scrollPosition = window.scrollY;
+                    var windowHeight = window.innerHeight;
+                    var documentHeight = document.body.offsetHeight;
+            
+                    if (scrollPosition + windowHeight >= documentHeight) {
+                        document.querySelector('.footer-rectangle').style.display = 'block';
+                    } else {
+                        document.querySelector('.footer-rectangle').style.display = 'none';
+                    }
+                });
+            </script>
+</body>
+
+</html>
